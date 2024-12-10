@@ -9,5 +9,5 @@ abstract class ApiService {
   factory ApiService(Dio dio) = _ApiService;
 
   @GET('everything')
-  Future<List<NewsModel>> getNews();
+  Future<List<NewsResponse>> getNews();
 }

@@ -24,12 +24,12 @@ class _ApiService implements ApiService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<List<NewsModel>> getNews() async {
+  Future<List<NewsResponse>> getNews() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<List<NewsModel>>(Options(
+    final _options = _setStreamType<List<NewsResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -46,10 +46,10 @@ class _ApiService implements ApiService {
           baseUrl,
         )));
     final _result = await _dio.fetch<List<dynamic>>(_options);
-    late List<NewsModel> _value;
+    late List<NewsResponse> _value;
     try {
       _value = _result.data!
-          .map((dynamic i) => NewsModel.fromJson(i as Map<String, dynamic>))
+          .map((dynamic i) => NewsResponse.fromJson(i as Map<String, dynamic>))
           .toList();
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
