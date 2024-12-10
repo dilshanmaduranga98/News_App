@@ -11,9 +11,9 @@ class NewsResponse{
 
   final String status;
   final int totalResults;
-  final List<Articals> articals;
+  final List<Articals>? articals;
 
-   NewsResponse({ required this.status, required this.totalResults, required this.articals });
+   NewsResponse({ required this.status, required this.totalResults, this.articals });
 
   factory NewsResponse.fromJson(Map<String, dynamic> json) => _$NewsResponseFromJson(json);
 }

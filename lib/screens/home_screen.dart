@@ -1,10 +1,41 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:quiz_assigment/models/news_model.dart';
 import 'package:quiz_assigment/screens/news_details_screen.dart';
 import 'package:quiz_assigment/screens/setting_screen.dart';
 import 'package:readmore/readmore.dart';
+import 'package:remixicon/remixicon.dart';
+
+final String? apikey = dotenv.env['API_KEY'];
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  //Future<List<Articals>> 
+  void getHttp(String? apiKey) async {
+    await dotenv.load(fileName: ".env");
+
+    try{
+      final response = await Dio()
+        .get('https://newsapi.org/v2/everything?q=apple&apiKey=$apiKey');
+
+        //print('Response Data : ${response.data}');
+    
+      final List<dynamic> newResponse = response.data['articles'];
+
+     // final articals = newResponse.map((item) => Articals(author: item.author, content: item.content, description: item.description, ));
+      print('News : ${newResponse}');
+
+      //return articals;
+
+    }catch (e)
+    {
+      print('Error fetching news: $e');
+      rethrow;
+    }
+    
+  }
 
   //final String header = ;
   final String description =
@@ -38,11 +69,20 @@ class HomeScreen extends StatelessWidget {
               Icons.settings,
             ),
           ),
+          IconButton(
+            onPressed: () {
+              getHttp(apikey);
+            },
+            icon: const Icon(Remix.download_2_line),
+          ),
         ],
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.only(top: 10, bottom: 20,),
+          padding: const EdgeInsets.only(
+            top: 10,
+            bottom: 20,
+          ),
           child: ListView.builder(
             itemCount: 50,
             itemBuilder: (context, index) {

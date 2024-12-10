@@ -9,8 +9,8 @@ part of 'news_model.dart';
 NewsResponse _$NewsResponseFromJson(Map<String, dynamic> json) => NewsResponse(
       status: json['status'] as String,
       totalResults: (json['totalResults'] as num).toInt(),
-      articals: (json['articals'] as List<dynamic>)
-          .map((e) => Articals.fromJson(e as Map<String, dynamic>))
+      articals: (json['articals'] as List<dynamic>?)
+          ?.map((e) => Articals.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
