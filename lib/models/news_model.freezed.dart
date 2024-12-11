@@ -20,14 +20,14 @@ Articals _$ArticalsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Articals {
-  Source get source => throw _privateConstructorUsedError;
-  String get author => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
-  String get urlToImage => throw _privateConstructorUsedError;
-  String get publishedAt => throw _privateConstructorUsedError;
-  String get content => throw _privateConstructorUsedError;
+  Source? get source => throw _privateConstructorUsedError;
+  String? get author => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
+  String? get urlToImage => throw _privateConstructorUsedError;
+  String? get publishedAt => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
 
   /// Serializes this Articals to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,16 +45,16 @@ abstract class $ArticalsCopyWith<$Res> {
       _$ArticalsCopyWithImpl<$Res, Articals>;
   @useResult
   $Res call(
-      {Source source,
-      String author,
-      String title,
-      String description,
-      String url,
-      String urlToImage,
-      String publishedAt,
-      String content});
+      {Source? source,
+      String? author,
+      String? title,
+      String? description,
+      String? url,
+      String? urlToImage,
+      String? publishedAt,
+      String? content});
 
-  $SourceCopyWith<$Res> get source;
+  $SourceCopyWith<$Res>? get source;
 }
 
 /// @nodoc
@@ -72,48 +72,48 @@ class _$ArticalsCopyWithImpl<$Res, $Val extends Articals>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? source = null,
-    Object? author = null,
-    Object? title = null,
-    Object? description = null,
-    Object? url = null,
-    Object? urlToImage = null,
-    Object? publishedAt = null,
-    Object? content = null,
+    Object? source = freezed,
+    Object? author = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? url = freezed,
+    Object? urlToImage = freezed,
+    Object? publishedAt = freezed,
+    Object? content = freezed,
   }) {
     return _then(_value.copyWith(
-      source: null == source
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as Source,
-      author: null == author
+              as Source?,
+      author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      urlToImage: null == urlToImage
+              as String?,
+      urlToImage: freezed == urlToImage
           ? _value.urlToImage
           : urlToImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      publishedAt: null == publishedAt
+              as String?,
+      publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
+              as String?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 
@@ -121,8 +121,12 @@ class _$ArticalsCopyWithImpl<$Res, $Val extends Articals>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $SourceCopyWith<$Res> get source {
-    return $SourceCopyWith<$Res>(_value.source, (value) {
+  $SourceCopyWith<$Res>? get source {
+    if (_value.source == null) {
+      return null;
+    }
+
+    return $SourceCopyWith<$Res>(_value.source!, (value) {
       return _then(_value.copyWith(source: value) as $Val);
     });
   }
@@ -137,17 +141,17 @@ abstract class _$$ArticalsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Source source,
-      String author,
-      String title,
-      String description,
-      String url,
-      String urlToImage,
-      String publishedAt,
-      String content});
+      {Source? source,
+      String? author,
+      String? title,
+      String? description,
+      String? url,
+      String? urlToImage,
+      String? publishedAt,
+      String? content});
 
   @override
-  $SourceCopyWith<$Res> get source;
+  $SourceCopyWith<$Res>? get source;
 }
 
 /// @nodoc
@@ -163,48 +167,48 @@ class __$$ArticalsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? source = null,
-    Object? author = null,
-    Object? title = null,
-    Object? description = null,
-    Object? url = null,
-    Object? urlToImage = null,
-    Object? publishedAt = null,
-    Object? content = null,
+    Object? source = freezed,
+    Object? author = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? url = freezed,
+    Object? urlToImage = freezed,
+    Object? publishedAt = freezed,
+    Object? content = freezed,
   }) {
     return _then(_$ArticalsImpl(
-      source: null == source
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as Source,
-      author: null == author
+              as Source?,
+      author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      urlToImage: null == urlToImage
+              as String?,
+      urlToImage: freezed == urlToImage
           ? _value.urlToImage
           : urlToImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      publishedAt: null == publishedAt
+              as String?,
+      publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
+              as String?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -226,21 +230,21 @@ class _$ArticalsImpl with DiagnosticableTreeMixin implements _Articals {
       _$$ArticalsImplFromJson(json);
 
   @override
-  final Source source;
+  final Source? source;
   @override
-  final String author;
+  final String? author;
   @override
-  final String title;
+  final String? title;
   @override
-  final String description;
+  final String? description;
   @override
-  final String url;
+  final String? url;
   @override
-  final String urlToImage;
+  final String? urlToImage;
   @override
-  final String publishedAt;
+  final String? publishedAt;
   @override
-  final String content;
+  final String? content;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -303,34 +307,34 @@ class _$ArticalsImpl with DiagnosticableTreeMixin implements _Articals {
 
 abstract class _Articals implements Articals {
   const factory _Articals(
-      {required final Source source,
-      required final String author,
-      required final String title,
-      required final String description,
-      required final String url,
-      required final String urlToImage,
-      required final String publishedAt,
-      required final String content}) = _$ArticalsImpl;
+      {required final Source? source,
+      required final String? author,
+      required final String? title,
+      required final String? description,
+      required final String? url,
+      required final String? urlToImage,
+      required final String? publishedAt,
+      required final String? content}) = _$ArticalsImpl;
 
   factory _Articals.fromJson(Map<String, dynamic> json) =
       _$ArticalsImpl.fromJson;
 
   @override
-  Source get source;
+  Source? get source;
   @override
-  String get author;
+  String? get author;
   @override
-  String get title;
+  String? get title;
   @override
-  String get description;
+  String? get description;
   @override
-  String get url;
+  String? get url;
   @override
-  String get urlToImage;
+  String? get urlToImage;
   @override
-  String get publishedAt;
+  String? get publishedAt;
   @override
-  String get content;
+  String? get content;
 
   /// Create a copy of Articals
   /// with the given fields replaced by the non-null parameter values.
@@ -346,8 +350,8 @@ Source _$SourceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Source {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// Serializes this Source to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -363,7 +367,7 @@ abstract class $SourceCopyWith<$Res> {
   factory $SourceCopyWith(Source value, $Res Function(Source) then) =
       _$SourceCopyWithImpl<$Res, Source>;
   @useResult
-  $Res call({int id, String name});
+  $Res call({String? id, String? name});
 }
 
 /// @nodoc
@@ -381,18 +385,18 @@ class _$SourceCopyWithImpl<$Res, $Val extends Source>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
+    Object? id = freezed,
+    Object? name = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -404,7 +408,7 @@ abstract class _$$SourceImplCopyWith<$Res> implements $SourceCopyWith<$Res> {
       __$$SourceImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String name});
+  $Res call({String? id, String? name});
 }
 
 /// @nodoc
@@ -420,18 +424,18 @@ class __$$SourceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
+    Object? id = freezed,
+    Object? name = freezed,
   }) {
     return _then(_$SourceImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -445,9 +449,9 @@ class _$SourceImpl with DiagnosticableTreeMixin implements _Source {
       _$$SourceImplFromJson(json);
 
   @override
-  final int id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -493,15 +497,15 @@ class _$SourceImpl with DiagnosticableTreeMixin implements _Source {
 }
 
 abstract class _Source implements Source {
-  const factory _Source({required final int id, required final String name}) =
-      _$SourceImpl;
+  const factory _Source(
+      {required final String? id, required final String? name}) = _$SourceImpl;
 
   factory _Source.fromJson(Map<String, dynamic> json) = _$SourceImpl.fromJson;
 
   @override
-  int get id;
+  String? get id;
   @override
-  String get name;
+  String? get name;
 
   /// Create a copy of Source
   /// with the given fields replaced by the non-null parameter values.

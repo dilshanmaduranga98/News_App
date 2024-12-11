@@ -7,8 +7,8 @@ part of 'news_model.dart';
 // **************************************************************************
 
 NewsResponse _$NewsResponseFromJson(Map<String, dynamic> json) => NewsResponse(
-      status: json['status'] as String,
-      totalResults: (json['totalResults'] as num).toInt(),
+      status: json['status'] as String?,
+      totalResults: (json['totalResults'] as num?)?.toInt(),
       articals: (json['articals'] as List<dynamic>?)
           ?.map((e) => Articals.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -23,14 +23,16 @@ Map<String, dynamic> _$NewsResponseToJson(NewsResponse instance) =>
 
 _$ArticalsImpl _$$ArticalsImplFromJson(Map<String, dynamic> json) =>
     _$ArticalsImpl(
-      source: Source.fromJson(json['source'] as Map<String, dynamic>),
-      author: json['author'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      url: json['url'] as String,
-      urlToImage: json['urlToImage'] as String,
-      publishedAt: json['publishedAt'] as String,
-      content: json['content'] as String,
+      source: json['source'] == null
+          ? null
+          : Source.fromJson(json['source'] as Map<String, dynamic>),
+      author: json['author'] as String?,
+      title: json['title'] as String?,
+      description: json['description'] as String?,
+      url: json['url'] as String?,
+      urlToImage: json['urlToImage'] as String?,
+      publishedAt: json['publishedAt'] as String?,
+      content: json['content'] as String?,
     );
 
 Map<String, dynamic> _$$ArticalsImplToJson(_$ArticalsImpl instance) =>
@@ -46,8 +48,8 @@ Map<String, dynamic> _$$ArticalsImplToJson(_$ArticalsImpl instance) =>
     };
 
 _$SourceImpl _$$SourceImplFromJson(Map<String, dynamic> json) => _$SourceImpl(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String,
+      id: json['id'] as String?,
+      name: json['name'] as String?,
     );
 
 Map<String, dynamic> _$$SourceImplToJson(_$SourceImpl instance) =>
