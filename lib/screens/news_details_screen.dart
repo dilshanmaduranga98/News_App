@@ -10,7 +10,7 @@ class NewsDetailsScreen extends ConsumerWidget {
   final String imageUrl;
   final String description;
   final String author;
-  final Duration time;
+  final String time;
 
    const NewsDetailsScreen({super.key,required this.newsId, required this.header, required this.imageUrl, required this.description, required this.author, required this.time});
 
@@ -63,12 +63,12 @@ class NewsDetailsScreen extends ConsumerWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('${time.inHours}h ago'),
+                    Text(time, style: const TextStyle(fontSize: 15, color: Color.fromARGB(255, 107, 107, 107),),),
                     IconButton(
                       onPressed: () {
                         ref.read(saveNewsProvider.notifier).toggle();
                         InsertNews(newsId: newsId,header: header, description: description,author: author, imageUrl: imageUrl, time: time).addData();
-                        const SnackBar(content: Text("hello"));
+                        
                       },
                       icon: isSaveNews
                           ? const Icon(Remix.bookmark_3_fill)
@@ -81,7 +81,7 @@ class NewsDetailsScreen extends ConsumerWidget {
                 ),
                 ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: Image.network(imageUrl)),
+                    child: Hero(tag: newsId,child:  Image.network(imageUrl,width: double.infinity,fit: BoxFit.fill,)),),
                 const SizedBox(
                   height: 30,
                 ),
@@ -96,10 +96,11 @@ class NewsDetailsScreen extends ConsumerWidget {
                   height: 30,
                 ),
                  Text(
-                  author,
+                  '-  $author  -',
                   style:const TextStyle(
                     fontStyle: FontStyle.italic,
                     fontFamily: 'Satoshi',
+                    fontSize: 12,
                   ),
                 ),
               ],

@@ -2,6 +2,8 @@
 
 A Flutter news app built using the latest Flutter features and tools. This app fetches news articles from an external API and displays them in an easy-to-read format. It utilizes modern state management, ORM, API integration, and model generation for clean, maintainable code.
 
+ **Source API - [NewsAPI](https://newsapi.org/)**
+
 ## Features
 
 - Fetches news articles from a RESTful API.

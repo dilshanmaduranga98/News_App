@@ -10,7 +10,7 @@ class  InsertNews {
   final String imageUrl;
   final String description;
   final String author;
-  final Duration time;
+  final String time;
 
   const InsertNews({required this.newsId, required this.header, required this.imageUrl, required this.description, required this.author, required this.time });
 
