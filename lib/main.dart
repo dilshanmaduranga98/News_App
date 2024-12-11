@@ -1,5 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logger/logger.dart';
 import 'package:quiz_assigment/providers/theme_provider.dart';
@@ -10,8 +11,8 @@ final logger = Logger();
 
 
 
-void main() {
- 
+void main() async{
+ await dotenv.load(fileName: ".env");
   runApp(
     const ProviderScope(
       child: MainApp(),
