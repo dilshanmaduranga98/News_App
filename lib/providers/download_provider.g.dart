@@ -6,7 +6,7 @@ part of 'download_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$saveNewsHash() => r'fc6810d2c22eb55b648934b958e44cbb567380e9';
+String _$saveNewsHash() => r'364d0f91f0be7337f9b2028ae1d3e732dfddb7d0';
 
 /// See also [SaveNews].
 @ProviderFor(SaveNews)

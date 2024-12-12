@@ -6,9 +6,7 @@ part 'download_provider.g.dart';
 class SaveNews extends _$SaveNews{
 
   @override 
-  bool build() {
-    return false;
-    }
+  bool build() => false;
 
   void toggle(){
     state = !state;

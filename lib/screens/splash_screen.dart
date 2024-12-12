@@ -7,16 +7,9 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          // decoration: const BoxDecoration(
-          //   gradient: LinearGradient(
-          //     colors: [
-          //       Color.fromARGB(255, 255, 255, 255),
-          //       Color.fromARGB(255, 255, 255, 255)
-          //     ],
-          //     begin: Alignment.topLeft,
-          //     end: Alignment.bottomRight,
-          //   ),
-          // ),
+          decoration: const BoxDecoration(
+            color: Colors.white
+          ),
           child:  Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -28,7 +21,7 @@ class SplashScreen extends StatelessWidget {
                       fontFamily: 'Satoshi',
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                      color: Color.fromARGB(255, 49, 49, 49)),
                 ),
               ],
             ),
